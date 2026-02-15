@@ -34,6 +34,7 @@ The script outputs a list of predicted words along with a **Confidence Score**.
 - **Word**: The token BERT thinks fits best.
 - **Confidence**: A percentage indicating how sure BERT is about that specific word.
 
-## Files
-- `bert_fill_mask.py`: The main Python script containing the logic.
-- `requirements.txt`: List of required Python libraries.
+## Offline Usage
+**Does it need internet?**
+- **First Run:** YES. The script needs to download the model (~260MB) from Hugging Face.
+- **Subsequent Runs:** NO. The model is cached on your computer, so you can run it offline without an internet connection.
