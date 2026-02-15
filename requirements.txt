@@ -1,3 +1,6 @@
 transformers
 torch
 tf-keras
+jupyter
+matplotlib
+seaborn

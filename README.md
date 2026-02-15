@@ -36,5 +36,13 @@ The script outputs a list of predicted words along with a **Confidence Score**.
 
 ## Offline Usage
 **Does it need internet?**
-- **First Run:** YES. The script needs to download the model (~260MB) from Hugging Face.
-- **Subsequent Runs:** NO. The model is cached on your computer, so you can run it offline without an internet connection.
+## Deep Dive Notebook
+For those who want to see the **internal workings** of BERT (Attention maps, Tokenization, Probability scores), we have provided a Jupyter Notebook.
+
+### How to Run
+1.  Install valid Jupyter support: `pip install jupyter matplotlib seaborn`
+2.  Launch the notebook:
+    ```bash
+    jupyter notebook bert_inner_workings.ipynb
+    ```
+3.  Calculations and visualizations will run step-by-step.
