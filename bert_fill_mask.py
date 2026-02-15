@@ -6,12 +6,12 @@ logging.getLogger("transformers").setLevel(logging.ERROR)
 from transformers import pipeline
 
 def main():
-    print("Loading BERT model... (this might take a minute the first time)")
+    print("Loading BERT (DistilBERT) model... (this will be much faster!)")
     
     # Initialize the pipeline for Masked Language Modeling (filling in the blanks)
-    # We use 'bert-base-uncased', the standard version of BERT.
+    # We use 'distilbert-base-uncased', which is faster and lighter than BERT but just as clear for demos.
     try:
-        fill_mask = pipeline("fill-mask", model="bert-base-uncased")
+        fill_mask = pipeline("fill-mask", model="distilbert-base-uncased")
     except Exception as e:
         print(f"Error loading model: {e}")
         return
@@ -26,8 +26,11 @@ def main():
     print("3. Type 'exit' or 'quit' to stop the program.\n")
 
     while True:
-        # Get input from the user
-        text = input("Enter your sentence: ")
+        try:
+            # Get input from the user
+            text = input("Enter your sentence: ")
+        except EOFError:
+            break
         
         # Check for exit condition
         if text.lower() in ['exit', 'quit']:
