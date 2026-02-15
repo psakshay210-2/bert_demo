@@ -6,12 +6,12 @@ logging.getLogger("transformers").setLevel(logging.ERROR)
 from transformers import pipeline
 
 def main():
-    print("Loading BERT (DistilBERT) model... (this will be much faster!)")
+    print("Loading BERT-Large model... (This is a large model [~1.3GB], please be patient!)")
     
     # Initialize the pipeline for Masked Language Modeling (filling in the blanks)
-    # We use 'distilbert-base-uncased', which is faster and lighter than BERT but just as clear for demos.
+    # We use 'bert-large-uncased-whole-word-masking', a much stronger model than Base or DistilBERT.
     try:
-        fill_mask = pipeline("fill-mask", model="distilbert-base-uncased")
+        fill_mask = pipeline("fill-mask", model="bert-large-uncased-whole-word-masking")
     except Exception as e:
         print(f"Error loading model: {e}")
         return
