@@ -43,6 +43,6 @@ For those who want to see the **internal workings** of BERT (Attention maps, Tok
 1.  Install valid Jupyter support: `pip install jupyter matplotlib seaborn`
 2.  Launch the notebook:
     ```bash
-    jupyter notebook bert_inner_workings.ipynb
+    python -m notebook bert_inner_workings.ipynb
     ```
 3.  Calculations and visualizations will run step-by-step.
